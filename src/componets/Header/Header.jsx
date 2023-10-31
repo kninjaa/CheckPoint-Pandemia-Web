@@ -1,12 +1,8 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from "styled-components";
+import { NavLink, Navbar } from '../../styles/style';
 
 function Header() {
-    const Navbar = styled.nav`
-        background-color: #fff;
-        box-shadow: 0 -7px 46px rgba(0, 0, 0, 0.1)
-    `;
-
     const NavList = styled.ul`
         list-style: none;
         padding: 0;
@@ -17,7 +13,7 @@ function Header() {
     `;
 
     const NavItem = styled.li` 
-        width: 35%;
+        width: 70%;
         height: 3vw;
         margin: 0;
         padding: 0;
@@ -26,21 +22,31 @@ function Header() {
         align-items: center;
     `;
 
-    const NavLink = styled.a`
-        text-decoration: none;
-        font-family: 'Raleway', sans-serif;
-        font-weight: 300;
-        color: #1d1d1d;
-    `;
+    const [showHeader, setShowHeader] = useState(true);
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 50 && !showHeader) { 
+                setShowHeader(true);
+            } else if (window.scrollY <= 50 && showHeader) {
+                setShowHeader(false);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, [showHeader]);
 
     return (
-        <Navbar>
+        <Navbar style={{ top: showHeader ? 0 : '-100%' }}>
             <NavList>
                 <NavItem>
                     <NavLink href="/">Home</NavLink>
-                    <NavLink href="/pandemic">Pandemic</NavLink>
-                    <NavLink href="/about">About</NavLink>
-                    <NavLink href="/contact">Contact</NavLink>
+                    <NavLink href="/pandemic">Pandemia</NavLink>
+                    <NavLink href="/about">Sobre</NavLink>
+                    <NavLink href="/contact">Contato</NavLink>
                 </NavItem>
             </NavList>
         </Navbar>

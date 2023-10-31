@@ -1,11 +1,10 @@
 import React from 'react';
-import Header from '../componets/Header/Header';
+import { Container } from '../styles/style';
 
 function Contact() {
   return (
-    <>
-      <Header />
-    </>
+    <Container>
+    </Container>
   );
 }
 
