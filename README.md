@@ -1,8 +1,37 @@
-# React + Vite
+# Tema do site desenvolvido: *Pandemia*
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Sejam bem-vindos ao projeto que aborda temas atuais sobre a Pandemia.
 
-Currently, two official plugins are available:
+## 🚀 Como ter esse projeto em seu dispositivo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 🔧 Instalação
+```
+npm i
+npm i --save
+yurn i
+```
+
+E em seguida:
+```
+npm run dev
+```
+
+
+## 🛠️ Construído com
+
+Esse projeto foi desenvolvido com:
+
+* [NodeJS](https://nodejs.org/) - Servidor JS
+* [Vite](https://vitejs.dev/) - Framework JS usado
+* [React](https://react.dev) - Framework JS usado
+* [Styled Components](https://styled-components.com) - Framework JS para estilização
+
+ 
+## ✒️ Autor
+
+O Projeto foi desenvolvido por:
+
+* **RM99643 - Rafae Chaves da Silva** - [GitHub](https://github.com/kninjaa) / [Linkedin](https://www.linkedin.com/in/rafael-chaves-ds/) 
+
+
+## 🎁 Muito Obrigado
